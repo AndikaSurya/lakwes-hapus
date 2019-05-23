@@ -1,21 +1,39 @@
 package bangun;
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-/**
- *
- * @author ASUS
- */
 public class BangunRuang extends javax.swing.JFrame {
-
-    /**
-     * Creates new form BangunRuang
-     */
+    
+    Kubus ku;
+    Balok blk;
+    Bola bl;
+    Kerucut kct;
+    LimasSegiempat lms;
+    PrismaSegitiga pris;
+    Tabung tb;
     public BangunRuang() {
         initComponents();
+        ku = new Kubus();
+        blk = new Balok();
+        bl = new Bola();
+        kct = new Kerucut();
+        lms = new LimasSegiempat();
+        pris = new PrismaSegitiga();
+        tb = new Tabung();
+        
+        jPanel1.add(ku);
+        jPanel1.add(blk);
+        jPanel1.add(bl);
+        jPanel1.add(kct);
+        jPanel1.add(lms);
+        jPanel1.add(pris);
+        jPanel1.add(tb);
+        
+        ku.setVisible(true);
+        blk.setVisible(false);
+        bl.setVisible(false);
+        kct.setVisible(false);
+        lms.setVisible(false);
+        pris.setVisible(false);
+        tb.setVisible(false);
     }
 
     /**
@@ -28,14 +46,14 @@ public class BangunRuang extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        butKubus = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
+        butBalok = new javax.swing.JButton();
+        butLimas = new javax.swing.JButton();
+        butBola = new javax.swing.JButton();
+        butPrisma = new javax.swing.JButton();
+        butKerucut = new javax.swing.JButton();
+        butTabung = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -43,10 +61,10 @@ public class BangunRuang extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel2.setText("Bangun Ruang");
 
-        jButton1.setText("Kubus");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        butKubus.setText("Kubus");
+        butKubus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                butKubusActionPerformed(evt);
             }
         });
 
@@ -57,146 +75,173 @@ public class BangunRuang extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setText("Balok");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        butBalok.setText("Balok");
+        butBalok.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                butBalokActionPerformed(evt);
             }
         });
 
-        jButton4.setText("Limas Segiempat");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        butLimas.setText("Limas Segiempat");
+        butLimas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                butLimasActionPerformed(evt);
             }
         });
 
-        jButton5.setText("Bola");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        butBola.setText("Bola");
+        butBola.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                butBolaActionPerformed(evt);
             }
         });
 
-        jButton6.setText("Prisma Segitiga");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        butPrisma.setText("Prisma Segitiga");
+        butPrisma.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                butPrismaActionPerformed(evt);
             }
         });
 
-        jButton7.setText("Kerucut");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        butKerucut.setText("Kerucut");
+        butKerucut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                butKerucutActionPerformed(evt);
             }
         });
 
-        jButton8.setText("Tabung");
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
+        butTabung.setText("Tabung");
+        butTabung.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
+                butTabungActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 471, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 432, Short.MAX_VALUE)
-        );
+        jPanel1.setLayout(new javax.swing.BoxLayout(jPanel1, javax.swing.BoxLayout.LINE_AXIS));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(275, 275, 275)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(10, 10, 10)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(275, 275, 275)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(17, Short.MAX_VALUE))
+                    .addComponent(butKubus, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(butBalok, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(butLimas, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(butPrisma, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(butTabung, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(butKerucut, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(butBola, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 471, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(18, 18, 18)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(11, 11, 11)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton1)
+                        .addComponent(butKubus)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton3)
+                        .addComponent(butBalok)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton4)
+                        .addComponent(butLimas)
                         .addGap(19, 19, 19)
-                        .addComponent(jButton6)
+                        .addComponent(butPrisma)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton8)
+                        .addComponent(butTabung)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton7)
+                        .addComponent(butKerucut)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton5)
+                        .addComponent(butBola)
                         .addGap(18, 18, 18)
                         .addComponent(jButton2))
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(38, Short.MAX_VALUE))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 432, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void butKubusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butKubusActionPerformed
+        ku.setVisible(true);
+        blk.setVisible(false);
+        bl.setVisible(false);
+        kct.setVisible(false);
+        lms.setVisible(false);
+        pris.setVisible(false);
+        tb.setVisible(false);
+    }//GEN-LAST:event_butKubusActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    private void butBalokActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butBalokActionPerformed
+        ku.setVisible(false);
+        blk.setVisible(true);
+        bl.setVisible(false);
+        kct.setVisible(false);
+        lms.setVisible(false);
+        tb.setVisible(false);
+        pris.setVisible(false);
+    }//GEN-LAST:event_butBalokActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    private void butLimasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butLimasActionPerformed
+        ku.setVisible(false);
+        blk.setVisible(false);
+        bl.setVisible(false);
+        kct.setVisible(false);
+        lms.setVisible(true);
+        pris.setVisible(false);
+        tb.setVisible(false);
+    }//GEN-LAST:event_butLimasActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
+    private void butBolaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butBolaActionPerformed
+        ku.setVisible(false);
+        blk.setVisible(false);
+        bl.setVisible(true);
+        kct.setVisible(false);
+        lms.setVisible(true);
+        pris.setVisible(false);
+        tb.setVisible(false);
+    }//GEN-LAST:event_butBolaActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
+    private void butPrismaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butPrismaActionPerformed
+        ku.setVisible(false);
+        blk.setVisible(false);
+        bl.setVisible(false);
+        kct.setVisible(false);
+        lms.setVisible(false);
+        pris.setVisible(true);
+        tb.setVisible(false);
+    }//GEN-LAST:event_butPrismaActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton7ActionPerformed
+    private void butKerucutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butKerucutActionPerformed
+        ku.setVisible(false);
+        blk.setVisible(false);
+        bl.setVisible(false);
+        kct.setVisible(true);
+        lms.setVisible(false);
+        pris.setVisible(false);
+        tb.setVisible(false);
+    }//GEN-LAST:event_butKerucutActionPerformed
 
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton8ActionPerformed
+    private void butTabungActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butTabungActionPerformed
+        ku.setVisible(false);
+        blk.setVisible(false);
+        bl.setVisible(false);
+        kct.setVisible(false);
+        lms.setVisible(true);
+        pris.setVisible(false);
+        tb.setVisible(true);
+    }//GEN-LAST:event_butTabungActionPerformed
 
     /**
      * @param args the command line arguments
@@ -234,14 +279,14 @@ public class BangunRuang extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton butBalok;
+    private javax.swing.JButton butBola;
+    private javax.swing.JButton butKerucut;
+    private javax.swing.JButton butKubus;
+    private javax.swing.JButton butLimas;
+    private javax.swing.JButton butPrisma;
+    private javax.swing.JButton butTabung;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
