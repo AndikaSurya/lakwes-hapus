@@ -29,7 +29,7 @@
                           <Group type="102" alignment="1" attributes="0">
                               <Component id="jLabel2" max="32767" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="tinggisegitiga" min="-2" pref="195" max="-2" attributes="0"/>
+                              <Component id="tinggis" min="-2" pref="195" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <Component id="jLabel9" min="-2" pref="144" max="-2" attributes="0"/>
@@ -77,7 +77,7 @@
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="tinggisegitiga" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tinggis" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -139,9 +139,9 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tinggiActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="tinggisegitiga">
+    <Component class="javax.swing.JTextField" name="tinggis">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tinggisegitigaActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tinggisActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="alas">

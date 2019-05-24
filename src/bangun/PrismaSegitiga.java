@@ -33,7 +33,7 @@ public class PrismaSegitiga extends javax.swing.JPanel {
         jLabel5 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         tinggi = new javax.swing.JTextField();
-        tinggisegitiga = new javax.swing.JTextField();
+        tinggis = new javax.swing.JTextField();
         alas = new javax.swing.JTextField();
         luas = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
@@ -60,9 +60,9 @@ public class PrismaSegitiga extends javax.swing.JPanel {
             }
         });
 
-        tinggisegitiga.addActionListener(new java.awt.event.ActionListener() {
+        tinggis.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tinggisegitigaActionPerformed(evt);
+                tinggisActionPerformed(evt);
             }
         });
 
@@ -117,7 +117,7 @@ public class PrismaSegitiga extends javax.swing.JPanel {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGap(18, 18, 18)
-                                .addComponent(tinggisegitiga, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(tinggis, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -152,7 +152,7 @@ public class PrismaSegitiga extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(tinggisegitiga, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tinggis, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
@@ -179,9 +179,9 @@ public class PrismaSegitiga extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_tinggiActionPerformed
 
-    private void tinggisegitigaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tinggisegitigaActionPerformed
+    private void tinggisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tinggisActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tinggisegitigaActionPerformed
+    }//GEN-LAST:event_tinggisActionPerformed
 
     private void alasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alasActionPerformed
         // TODO add your handling code here:
@@ -215,6 +215,6 @@ public class PrismaSegitiga extends javax.swing.JPanel {
     private javax.swing.JTextField luas;
     private javax.swing.JTextArea ta;
     private javax.swing.JTextField tinggi;
-    private javax.swing.JTextField tinggisegitiga;
+    private javax.swing.JTextField tinggis;
     // End of variables declaration//GEN-END:variables
 }
